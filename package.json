@@ -4,7 +4,9 @@
   "description": "8bit sprite generator invented by torin",
   "main": "lib/index.js",
   "scripts": {
-    "test": "tsc && ava"
+    "lint": "prettier -c Sprator-ts/**/*.ts",
+    "prettier": "prettier -w Sprator-ts/**/*.ts",
+    "test": "npm run lint && tsc && ava"
   },
   "repository": {
     "type": "git",
