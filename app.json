@@ -3,5 +3,8 @@
   "description": "8bit sprite generator invented by torin",
   "repository": "https://github.com/hackforplay/sprator",
   "logo": "https://sprator.herokuapp.com/icon.png",
-  "keywords": ["node", "express", "8bit", "sprite", "generator"]
+  "keywords": ["node", "express", "8bit", "sprite", "generator"],
+  "env": {
+    "NPM_CONFIG_PRODUCTION": false
+  }
 }
