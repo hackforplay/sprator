@@ -79,10 +79,13 @@ function render(
   backgroundColor: string
 ) {
   const size = matrix.length;
-  const canvas = new Canvas(size * ppd, size * ppd);
+  const canvasSize = Math.ceil(size * Math.SQRT2); // Add margin for round icon.
+  const margin = (canvasSize - size) / 2;
+  const canvas = new Canvas(canvasSize * ppd, canvasSize * ppd);
   const ctx = canvas.getContext('2d');
   ctx.fillStyle = backgroundColor;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.translate(margin * ppd, margin * ppd);
   for (let y = 0; y < matrix.length; y++) {
     const row = matrix[y];
     for (let x = 0; x < row.length; x++) {
