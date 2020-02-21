@@ -13,7 +13,7 @@ Sprator is a npm package to generate sprites using [cellular automaton](https://
 
 ## Installation
 
-### Node.js (fork)
+### Node.js
 
 You can install this package via npm.
 
@@ -25,13 +25,15 @@ Node.js v10 or higher.
 
 ## Sprator Server
 
-This package includes simple [server](/Sprator-ts/server.ts) using express. You can use it following command.
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+This package includes simple [server](/Sprator-ts/server.ts) using express. You can use it locally by following command.
 
 > npm start
 
 Then the server is on http://localhost:3000
 
-The server responds to GET request with any URL and accepts following queries.
+The server responds to GET request with any URL and accepts by following queries.
 
 ### Query
 
