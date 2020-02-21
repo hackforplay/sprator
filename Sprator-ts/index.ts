@@ -6,7 +6,7 @@ type Bin = 0 | 1;
  * Generate 8bit sprite
  * @param seed Hex string represents seed of generation. e.g. ffffffff
  * @param dotSize Number of dots in an edge. 6 or more (must be even)
- * @param pixelsPerDot Numbrer of pixels in a dot. e.g. If dotSize=10 and pixelsPerDot=4, image size is 40x40.
+ * @param pixelsPerDot Numbrer of pixels in a dot. e.g. If dotSize=10 and pixelsPerDot=4, image size is 60x60 (includes 5px margin).
  * @param fillColor Fill color can be used on the Canvas. e.g. #000000
  * @param borderColor Border color can be used on the Canvas. e.g. #000000
  * @param backgroundColor Background color can be used on the Canvas. e.g. #000000
