@@ -1,5 +1,8 @@
 # Sprator
 
+[![npm latest version](https://img.shields.io/npm/v/sprator/latest.svg)](https://www.npmjs.com/package/sprator)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
 This is a TypeScript implementation of [Sprator](https://github.com/yurkth/sprator) (original is C++).
 
 Sprator is a npm package to generate sprites using [cellular automaton](https://en.wikipedia.org/wiki/Cellular_automaton). Generated sprites is given as Buffer object in Node.js.
