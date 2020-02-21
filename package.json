@@ -1,6 +1,6 @@
 {
   "name": "sprator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "8bit sprite generator invented by torin",
   "main": "lib/index.js",
   "files": [
