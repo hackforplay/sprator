@@ -32,7 +32,9 @@
   },
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
+    "@types/express": "^4.17.2",
     "ava": "^3.3.0",
+    "express": "^4.17.1",
     "prettier": "^1.19.1",
     "semantic-release": "^17.0.4",
     "typescript": "^3.7.5"
