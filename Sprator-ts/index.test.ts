@@ -27,10 +27,10 @@ test('generate 10x10', async t => {
   ];
 
   for (const seed of seeds) {
-    const small = generate(seed, 10, 1, '#228b22', '#2f4f4f', 2);
+    const small = generate(seed, 10, 1, '#228b22', '#2f4f4f', '#000000', 2);
     t.snapshot(small);
 
-    const large = generate(seed, 10, 10, '#228b22', '#2f4f4f', 2);
+    const large = generate(seed, 10, 10, '#228b22', '#2f4f4f', '#000000', 2);
     await fs.writeFile(path.join(dist, seed + '.png'), large);
   }
 });

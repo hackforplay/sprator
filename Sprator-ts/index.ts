@@ -9,6 +9,7 @@ type Bin = 0 | 1;
  * @param pixelsPerDot Numbrer of pixels in a dot. e.g. If dotSize=10 and pixelsPerDot=4, image size is 40x40.
  * @param fillColor Fill color can be used on the Canvas. e.g. #000000
  * @param borderColor Border color can be used on the Canvas. e.g. #000000
+ * @param backgroundColor Background color can be used on the Canvas. e.g. #000000
  * @param stepCount Number of times to apply the algorithm
  */
 export function generate(
@@ -17,6 +18,7 @@ export function generate(
   pixelsPerDot: number,
   fillColor: string,
   borderColor: string,
+  backgroundColor: string,
   stepCount = 2
 ) {
   // Validate
@@ -31,7 +33,7 @@ export function generate(
   for (let index = 0; index < stepCount; index++) {
     matrix = step(matrix);
   }
-  return render(matrix, pixelsPerDot, fillColor, borderColor);
+  return render(matrix, pixelsPerDot, fillColor, borderColor, backgroundColor);
 }
 
 function initialize(seed: string, spriteSize: number) {
@@ -73,11 +75,14 @@ function render(
   matrix: Bin[][],
   ppd: number,
   fillColor: string,
-  borderColor: string
+  borderColor: string,
+  backgroundColor: string
 ) {
   const size = matrix.length;
   const canvas = new Canvas(size * ppd, size * ppd);
   const ctx = canvas.getContext('2d');
+  ctx.fillStyle = backgroundColor;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   for (let y = 0; y < matrix.length; y++) {
     const row = matrix[y];
     for (let x = 0; x < row.length; x++) {
