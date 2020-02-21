@@ -7,9 +7,11 @@
     "lib"
   ],
   "scripts": {
+    "build": "tsc",
     "lint": "prettier -c Sprator-ts/**/*.ts",
     "prettier": "prettier -w Sprator-ts/**/*.ts",
     "semantic-release": "semantic-release",
+    "start": "tsc && node lib/server.js",
     "test": "npm run lint && tsc && ava"
   },
   "repository": {
@@ -32,7 +34,9 @@
   },
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
+    "@types/express": "^4.17.2",
     "ava": "^3.3.0",
+    "express": "^4.17.1",
     "prettier": "^1.19.1",
     "semantic-release": "^17.0.4",
     "typescript": "^3.7.5"
