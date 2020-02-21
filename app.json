@@ -1,0 +1,7 @@
+{
+  "name": "Sprator Server",
+  "description": "8bit sprite generator invented by torin",
+  "repository": "https://github.com/hackforplay/sprator",
+  "logo": "https://sprator.herokuapp.com/icon.png",
+  "keywords": ["node", "express", "8bit", "sprite", "generator"]
+}
