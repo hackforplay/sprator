@@ -13,8 +13,6 @@ Sprator is a npm package to generate sprites using [cellular automaton](https://
 
 ## Installation
 
-### Node.js
-
 You can install this package via npm.
 
 > npm install sprator
