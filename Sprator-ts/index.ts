@@ -79,7 +79,8 @@ function render(
   backgroundColor: string
 ) {
   const size = matrix.length;
-  const canvasSize = Math.ceil(size * Math.SQRT2); // Add margin for round icon.
+  let canvasSize = Math.ceil(size * Math.SQRT2); // Add margin for round icon.
+  canvasSize += canvasSize % 2; // Make canvasSize even number.
   const margin = (canvasSize - size) / 2;
   const canvas = new Canvas(canvasSize * ppd, canvasSize * ppd);
   const ctx = canvas.getContext('2d');
