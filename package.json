@@ -7,10 +7,11 @@
     "lib"
   ],
   "scripts": {
+    "build": "tsc",
     "lint": "prettier -c Sprator-ts/**/*.ts",
     "prettier": "prettier -w Sprator-ts/**/*.ts",
     "semantic-release": "semantic-release",
-    "start": "tsc && PORT=3000 node lib/server.js",
+    "start": "tsc && node lib/server.js",
     "test": "npm run lint && tsc && ava"
   },
   "repository": {
