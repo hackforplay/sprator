@@ -23,7 +23,7 @@ const buffer = generate('040f1148', 10, 16, 'cyan', 'blue', 'white'); // シー�
 
 結果： ![040f1148.png](https://spr.hackforplay.xyz/?seed=040f1148&dot=10&ppd=16&fill=cyan&border=blue&background=black)
 
-パラメータについては [Sprator Server](/#Sprator_Server) を参照して下さい
+パラメータについては [Sprator Server](/README_ja.md#Sprator_Server) を参照して下さい
 
 ## Installation
 
