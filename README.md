@@ -55,7 +55,7 @@ Default: `10`
 
 #### ppd
 
-Numbrer of pixels in a dot. e.g. If dot=10 and ppd=4, image size is 60x60 (includes 5px margin).
+Numbrer of pixels in a dot. e.g. If dot=10 and ppd=4, the image pattern size is 40x40, and output image size is 64x64 (includes 12px margin).
 
 Default: 10
 
