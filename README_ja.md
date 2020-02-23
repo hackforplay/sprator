@@ -23,11 +23,7 @@ const buffer = generate('040f1148', 10, 16, 'cyan', 'blue', 'white'); // シー�
 
 結果： ![040f1148.png](https://spr.hackforplay.xyz/?seed=040f1148&dot=10&ppd=16&fill=cyan&border=blue&background=black)
 
-また、ハックフォープレイ株式会社では Sprator を気軽にウェブ上で使える CDN を立ち上げました。CDN を使うと、自分のサーバーを持っていなくても sprator を試すことができます
-
-- https://spr.hackforplay.xyz
-
-パラメータについては [#Sprator Server](/#Sprator Server) を参照して下さい
+パラメータについては [Sprator Server](/#Sprator_Server) を参照して下さい
 
 ## Installation
 
