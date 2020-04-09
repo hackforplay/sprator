@@ -1,16 +1,18 @@
 import { Canvas } from 'canvas';
+import { createHash } from 'crypto';
 
 type Bin = 0 | 1;
 
 /**
  * Generate 8bit sprite
- * @param seed Hex string represents seed of generation. e.g. ffffffff
+ * @param seed Random string represents seed of generation.
  * @param dotSize Number of dots in an edge. 6 or more (must be even)
  * @param pixelsPerDot Numbrer of pixels in a dot. e.g. If dotSize=10 and pixelsPerDot=4, image size is 60x60 (includes 5px margin).
  * @param fillColor Fill color can be used on the Canvas. e.g. #000000
  * @param borderColor Border color can be used on the Canvas. e.g. #000000
  * @param backgroundColor Background color can be used on the Canvas. e.g. #000000
  * @param stepCount Number of times to apply the algorithm
+ * @param noHash Do not hash seed values.
  */
 export function generate(
   seed: string,
@@ -19,7 +21,8 @@ export function generate(
   fillColor: string,
   borderColor: string,
   backgroundColor: string,
-  stepCount = 2
+  stepCount = 2,
+  noHash = false
 ) {
   // Validate
   if (dotSize < 6) {
@@ -28,6 +31,13 @@ export function generate(
   if (dotSize % 2 !== 0) {
     throw new TypeError(`dotSize must be even number but ${dotSize}.`);
   }
+
+  // Hash input
+  seed = noHash
+    ? seed
+    : createHash('md5')
+        .update(seed)
+        .digest('hex');
 
   let matrix = initialize(seed, dotSize);
   for (let index = 0; index < stepCount; index++) {

@@ -19,7 +19,6 @@ test('Valid queries', t => {
 
 test('Invalid queries', t => {
   const cases = [
-    { seed: 'invalid hex' },
     { dot: '4' },
     { dot: '14' },
     { dot: '7' },

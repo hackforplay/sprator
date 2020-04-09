@@ -53,10 +53,7 @@ export function validate(query: Query) {
     return value;
   };
 
-  const seed = str('seed', '040f1148');
-  if (Number.isNaN(Number.parseInt(seed, 16))) {
-    throw new Error(`seed must be hex but given ${seed}`);
-  }
+  const seed = str('seed', '');
 
   const dot = int('dot', 10);
   if (dot < 6 || dot > 12) {

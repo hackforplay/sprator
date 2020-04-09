@@ -18,10 +18,10 @@ sprator (Sprator-ts) は、 [torin (@yurkth)](https://twitter.com/yurkth) 氏が
 ```typescript
 import { generate } from 'sprator';
 
-const buffer = generate('040f1148', 10, 16, 'cyan', 'blue', 'white'); // シード値, 大きさ, 色を与えて生成する
+const buffer = generate('seed', 10, 16, 'cyan', 'blue', 'white'); // シード値, 大きさ, 色を与えて生成する
 ```
 
-結果： ![040f1148.png](https://spr.hackforplay.xyz/?seed=040f1148&dot=10&ppd=16&fill=cyan&border=blue&background=black)
+結果： ![seed.png](https://spr.hackforplay.xyz/?seed=seed&dot=10&ppd=16&fill=cyan&border=blue&background=black)
 
 パラメータについては [Sprator Server](/README_ja.md#sprator-server) を参照して下さい
 
@@ -59,12 +59,12 @@ e.g. http://localhost:3000?seed=1d14f&dot=8&ppd=8&fill=palegreen&border=forestgr
 
 #### seed
 
-セルオートマトンの初期状態の決定するシード値です。与えられた文字列を１６進数として解釈し、２進数に変換して、それぞれのビットをセルに対応させます
+セルオートマトンの初期状態を決定する任意の文字列です。与えられた文字列をハッシュしたあと１６進数として解釈し、２進数に変換して、それぞれのビットをセルに対応させます
 
 > ヒント：スプライトは左右が鏡になっており、かつ上端と左端と下端は枠線をつけるために常に０になるので、10 ドットの場合のセルオートマトンは `(10/2-1) * (10-2) = 32` マス（32bit）になります
-> つまり１６進数に換算するとちょうど８桁まではシード値として有効ですが、それより右の数値は無視されます。また、シード値の長さが足りない場合は０として扱われます
+> つまり１６進数に換算するとちょうど８桁までは有効ですが、それより右の数値は無視されます。また、シード値の長さが足りない場合は０として扱われます
 
-Default: `040f1148`
+Default: 空の文字列
 
 #### dot
 

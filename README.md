@@ -43,9 +43,9 @@ e.g. http://localhost:3000?seed=1d14f&dot=8&ppd=8&fill=palegreen&border=forestgr
 
 #### seed
 
-Hex string represents seed of generation.
+Random string represents seed of generation.
 
-Default: `040f1148`
+Default: empty string
 
 #### dot
 
